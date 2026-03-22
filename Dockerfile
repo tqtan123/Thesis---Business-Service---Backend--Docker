@@ -7,10 +7,9 @@ RUN npm install \
     node-red-contrib-google-cloud \
     node-red-contrib-genai
 
-# bắt Node-RED chạy port 8080
+# ép Node-RED chạy đúng port Cloud Run
 ENV PORT=8080
-ENV NODE_RED_PORT=8080
 
 EXPOSE 8080
 
-CMD ["npm", "start", "--", "--port", "8080"]
+CMD ["node-red", "-p", "8080"]
